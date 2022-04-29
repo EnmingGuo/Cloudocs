@@ -1,0 +1,25 @@
+<!--定义form组件-->
+<form bindsubmit="toRegister">
+    <!--输入框区块-->
+    <view id="inputView">
+        <!--文本框-->
+        <input type="text" placeholder="用户名" name="userName"></input>
+        <!--密码框-->
+        <input type="text" placeholder="输入密码6~12位字母数字组合(必须有字母数字）" password name="userPwd"></input>
+        <input type="text" placeholder="确认密码" password name="userPwd1"></input>
+        <!--手机号-->
+        <input type="number" placeholder="手机号" name="phone"></input>
+        <!--邮箱-->
+        <input type="text" placeholder="邮箱" name="email"></input>
+        <picker bindchange="bindPickerChange" value="{{value}}" range="{{array}}">
+             <view class="picker">
+                     当前选择：{{array[value]}}
+             </view>
+        </picker>
+    </view>
+    <!--按钮区域-->
+    <view id="buttonView">
+        <button form-type="submit">注册</button>
+        <view bindtap="myret">已有账号，去绑定</view>
+    </view>
+</form>

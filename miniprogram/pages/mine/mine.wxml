@@ -1,0 +1,21 @@
+<view class="user">
+   <view wx:if="{{userinfo.avatarUrl}}" class="user_img_wrap">
+    <image class="bg" src="{{userinfo.avatarUrl}}" ></image>
+    <view class="info">
+     <image class="icon" src="{{userinfo.avatarUrl}}"></image>
+     <view class="name">{{userinfo.nickName}}</view>
+    </view>
+    <view wx:if="{{situation != 4}}">
+     <input class="requestTEL" type="number" placeholder="请输入电话号"   confirm-type="done" bindchange='getTEL'></input>
+     <input class="requestKEYWORD" type="password" placeholder="请输入密码"   confirm-type="done" bindchange='getKEYWORD' password></input>
+     <button class='btn' bindtap='enterClicked' type="primary">绑定</button>
+     <button class = 'btn'bindtap='regist'type='primary'>注册</button>
+    </view>
+    
+    
+   </view>
+  
+    <button wx:else class="cu-btn bg-blue lg"  bindtap="getUserProfile">登录</button>
+  
+</view>
+
